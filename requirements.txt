@@ -1,0 +1,6 @@
+mcap>=1.1.0
+mcap-protobuf-support>=0.5.0
+foxglove-schemas-protobuf>=0.3.0
+opencv-python>=4.8.0
+numpy>=1.24.0
+
