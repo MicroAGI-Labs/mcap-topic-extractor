@@ -1,0 +1,284 @@
+{
+  "configById": {
+    "3D!18i6zy7": {
+      "layers": {
+        "845139cb-26bc-40b3-8161-8ab60af4baf5": {
+          "visible": true,
+          "frameLocked": true,
+          "label": "Grid",
+          "instanceId": "845139cb-26bc-40b3-8161-8ab60af4baf5",
+          "layerId": "foxglove.Grid",
+          "size": 10,
+          "divisions": 10,
+          "lineWidth": 1,
+          "color": "#248eff",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "order": 1
+        }
+      },
+      "cameraState": {
+        "perspective": true,
+        "distance": 6.147137354481234,
+        "phi": 41.0301381119605,
+        "thetaOffset": -75.61372785348088,
+        "targetOffset": [
+          -0.9643284559437838,
+          -0.3355797965411792,
+          -1.2201479321228922e-16
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "targetOrientation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "fovy": 45,
+        "near": 0.5,
+        "far": 5000
+      },
+      "followMode": "follow-pose",
+      "scene": {
+        "transforms": {
+          "showLabel": false
+        }
+      },
+      "transforms": {
+        "frame:world": {
+          "visible": false
+        },
+        "frame:color": {
+          "visible": false
+        },
+        "frame:accel": {
+          "visible": false
+        },
+        "frame:gyro": {
+          "visible": false
+        },
+        "frame:left_wrist": {
+          "visible": true
+        },
+        "frame:depth": {
+          "visible": false
+        },
+        "frame:right_wrist": {
+          "visible": true
+        }
+      },
+      "topics": {
+        "/camera/color/info": {
+          "visible": true
+        },
+        "/camera/color/image": {
+          "visible": true,
+          "frameLocked": true,
+          "cameraInfoTopic": "/camera/color/info",
+          "distance": 1,
+          "planarProjectionFactor": 0,
+          "renderMode": "default",
+          "projectionFrameId": "world",
+          "color": "#ffffff",
+          "rectifyImage": true,
+          "pointSize": 1.5
+        },
+        "/camera/depth/image": {
+          "visible": false,
+          "frameLocked": true,
+          "cameraInfoTopic": "/camera/depth/info",
+          "distance": 1,
+          "planarProjectionFactor": 0,
+          "renderMode": "default",
+          "projectionFrameId": "world",
+          "color": "#ffffff",
+          "rectifyImage": true,
+          "pointSize": 1.5
+        },
+        "/hands/left": {
+          "visible": false,
+          "type": "line",
+          "lineWidth": 0.025,
+          "gradient": [
+            "#6bffe9ff",
+            "#89ff6bff"
+          ]
+        },
+        "/hands/right": {
+          "visible": false,
+          "type": "line",
+          "lineWidth": 0.025,
+          "gradient": [
+            "#1e00ffff",
+            "#1e00ffff"
+          ]
+        }
+      },
+      "publish": {
+        "type": "point",
+        "poseTopic": "/move_base_simple/goal",
+        "pointTopic": "/clicked_point",
+        "poseEstimateTopic": "/initialpose",
+        "poseEstimateXDeviation": 0.5,
+        "poseEstimateYDeviation": 0.5,
+        "poseEstimateThetaDeviation": 0.26179939
+      },
+      "imageMode": {}
+    },
+    "Image!3mnp456": {
+      "cameraState": {
+        "distance": 20,
+        "perspective": true,
+        "phi": 60,
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "targetOffset": [
+          0,
+          0,
+          0
+        ],
+        "targetOrientation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "thetaOffset": 45,
+        "fovy": 45,
+        "near": 0.5,
+        "far": 5000
+      },
+      "followMode": "follow-pose",
+      "scene": {},
+      "transforms": {},
+      "topics": {
+        "/hands/right": {
+          "visible": true,
+          "type": "line",
+          "lineWidth": 0.01,
+          "gradient": [
+            "#ff000082",
+            "#ff00006b"
+          ]
+        },
+        "/hands/left": {
+          "visible": true,
+          "type": "line",
+          "lineWidth": 0.01,
+          "gradient": [
+            "#0026ff5e",
+            "#0026ff80"
+          ]
+        }
+      },
+      "layers": {},
+      "publish": {
+        "type": "point",
+        "poseTopic": "/move_base_simple/goal",
+        "pointTopic": "/clicked_point",
+        "poseEstimateTopic": "/initialpose",
+        "poseEstimateXDeviation": 0.5,
+        "poseEstimateYDeviation": 0.5,
+        "poseEstimateThetaDeviation": 0.26179939
+      },
+      "imageMode": {
+        "imageTopic": "/camera/color/image",
+        "calibrationTopic": "/camera/color/info"
+      }
+    },
+    "StateTransitions!2g0t2kq": {
+      "paths": [
+        {
+          "value": "/hands/left/health.valid",
+          "timestampMethod": "receiveTime",
+          "customStates": {
+            "type": "discrete",
+            "states": []
+          }
+        },
+        {
+          "value": "/hands/right/health.valid",
+          "timestampMethod": "receiveTime",
+          "customStates": {
+            "type": "discrete",
+            "states": []
+          }
+        },
+        {
+          "value": "/camera/color/health.valid",
+          "timestampMethod": "receiveTime",
+          "customStates": {
+            "type": "discrete",
+            "states": []
+          }
+        },
+        {
+          "value": "/tf/camera/health.valid",
+          "timestampMethod": "receiveTime",
+          "customStates": {
+            "type": "discrete",
+            "states": []
+          }
+        },
+        {
+          "value": "/task.task_title",
+          "timestampMethod": "receiveTime",
+          "customStates": {
+            "type": "discrete",
+            "states": []
+          }
+        }
+      ],
+      "isSynced": true
+    },
+    "RawMessages!os6rgs": {
+      "diffEnabled": false,
+      "diffMethod": "custom",
+      "diffTopicPath": "",
+      "showFullMessageForDiff": false,
+      "topicPath": "/task",
+      "fontSize": 12,
+      "expansion": {
+        "timestamp": "e"
+      }
+    }
+  },
+  "globalVariables": {},
+  "userNodes": {},
+  "playbackConfig": {
+    "speed": 1
+  },
+  "drawerConfig": {
+    "tracks": []
+  },
+  "layout": {
+    "first": {
+      "first": "3D!18i6zy7",
+      "second": "Image!3mnp456",
+      "direction": "row"
+    },
+    "second": {
+      "first": "StateTransitions!2g0t2kq",
+      "second": "RawMessages!os6rgs",
+      "direction": "row",
+      "splitPercentage": 79.89457831325302
+    },
+    "direction": "column",
+    "splitPercentage": 59.56102185878531
+  }
+}
